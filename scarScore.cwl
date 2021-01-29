@@ -5,10 +5,11 @@ class: CommandLineTool
 requirements:
   DockerRequirement:
     dockerPull: "sinaiiidgst/scarscore:d938eca"
+  InlineJavascriptRequirement: {}
 
 inputs:
   facetsSegments:
-    type: string
+    type: File
     inputBinding:
       position: 1
 
@@ -22,7 +23,7 @@ inputs:
     inputBinding:
       position: 3
 
-baseCommand: [Rscript, "scarScore.R"]
+baseCommand: [Rscript, /bin/scarScore.R]
 
 outputs:
   scarInputTable:
