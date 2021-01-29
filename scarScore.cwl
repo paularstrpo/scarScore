@@ -4,7 +4,7 @@ class: CommandLineTool
 
 requirements:
   DockerRequirement:
-    dockerPull: "sinaiiidgst/scarscore:a36f233"
+    dockerPull: "sinaiiidgst/scarscore:d938eca"
   InlineJavascriptRequirement: {}
 
 inputs:
