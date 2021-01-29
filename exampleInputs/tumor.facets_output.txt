@@ -1,0 +1,2 @@
+pair_name	purity	ploidy	digLogR
+tumor	0.89	2.01	-0.0052143180727279

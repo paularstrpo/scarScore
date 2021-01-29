@@ -13,22 +13,25 @@ inputs:
     inputBinding:
       position: 1
 
-  ploidy:
+  ploidyPurity:
     type: File
     inputBinding:
       position: 2
-
+      
+  sampleID:
+    type: string
+    inputBinding:
+      position: 3
 
 baseCommand: [Rscript, "scarScore.R"]
-
 
 outputs:
   scarInputTable:
     type: File
     outputBinding:
-      glob: "scarHRD_input.tsv"
+      glob: $(inputs.sampleID + "_HRDinputs.txt")
 
   scarResultsTable:
     type: File
     outputBinding:
-      glob: "scarHRD_results.tsv"
+      glob: $(inputs.sampleID + "_HRDresults.txt")
