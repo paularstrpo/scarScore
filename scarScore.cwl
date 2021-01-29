@@ -4,7 +4,7 @@ class: CommandLineTool
 
 requirements:
   DockerRequirement:
-    dockerPull: "iidsgt/scarScore:[tag]"
+    dockerPull: "sinaiiidgst/scarscore:a36f233"
   InlineJavascriptRequirement: {}
 
 inputs:
