@@ -5,7 +5,6 @@ class: CommandLineTool
 requirements:
   DockerRequirement:
     dockerPull: "sinaiiidgst/scarscore:d938eca"
-  InlineJavascriptRequirement: {}
 
 inputs:
   facetsSegments:
