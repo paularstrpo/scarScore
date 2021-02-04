@@ -8,12 +8,12 @@ requirements:
   InlineJavascriptRequirement: {}
 
 inputs:
-  facetsSegments:
+  FacetsCNCF:
     type: File
     inputBinding:
       position: 1
 
-  ploidyPurity:
+  FacetsSummary:
     type: File
     inputBinding:
       position: 2
@@ -26,12 +26,7 @@ inputs:
 baseCommand: [Rscript, /bin/scarScore.R]
 
 outputs:
-  scarInputTable:
-    type: File
-    outputBinding:
-      glob: $(inputs.sampleID + "_HRDinputs.txt")
-
-  scarResultsTable:
+  scar_results:
     type: File
     outputBinding:
       glob: $(inputs.sampleID + "_HRDresults.txt")
