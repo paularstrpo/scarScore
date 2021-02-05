@@ -29,8 +29,8 @@ outputs:
   scar_input:
     type: File
     outputBinding:
-      glob: $(inputs.sampleID + "_HRD.input.txt")
+      glob: $(inputs.sampleID + "_HRDinputs.txt")
   scar_results:
     type: File
     outputBinding:
-      glob: $(inputs.sampleID + "_HRD.results.txt")
+      glob: $(inputs.sampleID + "_HRDresults.txt")
