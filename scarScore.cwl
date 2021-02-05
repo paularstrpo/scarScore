@@ -26,7 +26,11 @@ inputs:
 baseCommand: [Rscript, /bin/scarScore.R]
 
 outputs:
+  scar_input:
+    type: File
+    outputBinding:
+      glob: $(inputs.sampleID + "_HRD.input.txt")
   scar_results:
     type: File
     outputBinding:
-      glob: $(inputs.sampleID + "_HRDresults.txt")
+      glob: $(inputs.sampleID + "_HRD.results.txt")

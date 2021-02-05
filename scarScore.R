@@ -39,8 +39,6 @@ write.table(scarHRD_input_table, paste0(sample_name, '_HRDinputs.txt'), sep = "\
 # get SCAR data & outputs
 scar_data <- scar_score(paste0(sample_name, '_HRDinputs.txt'), reference = "grch38", seqz=FALSE, chr.in.names=FALSE, ploidy=ploidy_table$ploidy)
 scar_data <- as.data.frame(scar_data)
-cols <- colnames(scar_data)
-scar_data$sampleID <- sample_name
-scar_data <- scar_data[, c('sampleID', cols)] # reorder columns
-colnames(scar_data) <- make.names(scar_data) # make column names valid R names
+colnames(scar_data) <- c("HRD", "Telomeric.AI", "LST", "HRD.sum")
+rownames(scar_data) <- sample_name
 write.table(scar_data, paste0(sample_name, '_HRDresults.txt'), sep = "\t", col.names = TRUE, row.names = FALSE, quote = FALSE)  
